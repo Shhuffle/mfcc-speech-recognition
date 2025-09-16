@@ -65,10 +65,11 @@ def majorityLabelVoting(k_labels,Total_Labels = 3):
 
 
 #inputs, U - unknown data. C = known data structured as [label ,feature_variables]
-#NOTE : provide the known frame value C in ascending order i.e 0,1,2....
+
 #U = DCT.MFCCS.mean(axis=0)
-U = DCT.feature_vector #get the feature vector of my_recording.wav form the dct.py 
-print(U)
+#get the feature vector of my_recording.wav form the dct.py 
+U = DCT.feature_vector
+
 '''
 0 - A
 1 - B
@@ -99,7 +100,7 @@ C = np.array([
 #parameters
 k = 1
 
-total_label = 6
+total_label = len(C[:,0])
 dis = computeDistance(C,U,k)
 print(dis)
 
