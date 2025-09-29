@@ -65,5 +65,6 @@ A KNN algorithm customized for MFCC-based speech recognition:
 
 ## Notes
 
-- The known MFCC values are calculated using the author’s voice and recorded in a room. MFCCs vary with the environment, so for better results, **record your own audio**, calculate MFCCs, and add them to the vector `C` with the first element as the letter/word.
+- The known MFCC values are calculated using the my voice and recorded in a sound environment with no background noise. MFCCs vary with the environment, so for better results, **record your own audio**, calculate MFCCs, and add them to the vector `C` with the first element as the letter/word.
 - Known MFCCs are recorded for a **1-second audio**, with frames starting after 0.5 seconds. Altering the audio length will change the MFCC values, so keep the audio 1 second if you want to use the provided values. Otherwise, calculate MFCCs yourself.
+- Once you record your own audio and add the MFCCs to the known database value then you can use the program to recognize the letter/word in the next run.
